@@ -11,7 +11,7 @@ repository = "https://github.com/HormigaDev/r-perms"
 documentation = "https://docs.rs/r-perms"
 readme = "README.md"
 license = "MIT"
-keywords = ["permissions", "roles", "CLI", "Rust", "security"]
+keywords = ["permissions", "roles", "CLI", "Rust"]
 categories = ["command-line-utilities", "security"]
 
 [dependencies]
