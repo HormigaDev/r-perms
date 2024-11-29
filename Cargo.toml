@@ -1,6 +1,6 @@
 [package]
 name = "r-perms"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 
 # La metadata para crates.io
@@ -20,3 +20,4 @@ serde = {version = "1.0", features = ["derive"]}
 serde_json = "1.0"
 clap = {version = "4.1", features = ["derive"]}
 bbel-common = "0.1"
+colored = "2.0"

@@ -1,5 +1,6 @@
 use bbel_common::terminal::cls;
 use clap::Parser;
+use colored::*;
 use dialoguer::{theme::ColorfulTheme, MultiSelect};
 use serde::Deserialize;
 use std::fs::File;
@@ -32,7 +33,11 @@ fn main() {
     for permission in &permissions_data.permissions {
         let name = permission[0].as_str().unwrap();
         let value = permission[1].as_u64().unwrap();
-        println!("[{}] {}", value, name);
+        println!(
+            "[{}] {}",
+            format!("{}", name).blue(),
+            format!("{}", value).green()
+        );
     }
 
     let selections = MultiSelect::with_theme(&ColorfulTheme::default())
@@ -54,5 +59,9 @@ fn main() {
     }
 
     cls();
-    println!("Calculated Permissions Value: {}", total);
+    println!(
+        "{} {}",
+        format!("{}", "Calculated Permissions Value:").blue(),
+        format!("{}", total).green()
+    );
 }
