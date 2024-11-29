@@ -3,6 +3,17 @@ name = "r-perms"
 version = "0.1.0"
 edition = "2021"
 
+# La metadata para crates.io
+authors = ["HormigaDev <hormigadev7@gmail.com>"]
+description = "Una herramienta de línea de comandos para calcular permisos granulares en aplicaciones basadas en roles"
+homepage = "https://github.com/HormigaDev/r-perms"
+repository = "https://github.com/HormigaDev/r-perms"
+documentation = "https://docs.rs/r-perms"
+readme = "README.md"
+license = "MIT"
+keywords = ["permissions", "roles", "CLI", "Rust", "security"]
+categories = ["command-line-utilities", "security"]
+
 [dependencies]
 dialoguer = "0.10"
 serde = {version = "1.0", features = ["derive"]}
