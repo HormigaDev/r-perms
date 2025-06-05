@@ -29,19 +29,8 @@ fn main() {
     let permissions_data: PermissionsData =
         serde_json::from_str(&data).expect("Error parsing JSON");
 
-    println!("Permissions loaded from JSON:");
-    for permission in &permissions_data.permissions {
-        let name = permission[0].as_str().unwrap();
-        let value = permission[1].as_u64().unwrap();
-        println!(
-            "[{}] {}",
-            format!("{}", name).blue(),
-            format!("{}", value).green()
-        );
-    }
-
     let selections = MultiSelect::with_theme(&ColorfulTheme::default())
-        .with_prompt("Select the permissions")
+        .with_prompt("Select the permissions. Use SPACE to select and ENTER to confirm.")
         .items(
             &permissions_data
                 .permissions
